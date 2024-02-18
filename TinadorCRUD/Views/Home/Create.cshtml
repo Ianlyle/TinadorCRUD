@@ -1,0 +1,23 @@
+﻿@model Table_1
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<hr />
+<div>
+    @using (Html.BeginForm())
+    {
+        <label>Username</label>
+        @Html.TextBoxFor(m => m.username, new { @class = "form-control" })    
+        <label>Password</label>
+        @Html.PasswordFor(m => m.password, new { @class = "form-control" })
+        <br />
+        <input type="submit" name="submit" class="btn btn-success" value="Save" />
+        <br />
+        @ViewBag.Msg
+    }
+
+
+</div>
+

@@ -1,0 +1,23 @@
+﻿@model Table_1
+@{
+    ViewBag.Title = "Update";
+}
+
+<h2>Update</h2>
+<hr />
+<div class="col-md-6">
+    @using (Html.BeginForm())
+    {
+        @Html.HiddenFor(m => m.id)
+        <label>Username</label>
+        @Html.TextBoxFor(m => m.username, new { @class = "form-control" })
+        <label>Password</label>
+        @Html.TextBoxFor(m => m.password, new { @class = "form-control" })
+        <br />
+        <input type="submit" name="name" class="btn btn-info" value="Update" />
+        <br />
+        @ViewBag.Msg
+    }
+
+
+</div>
